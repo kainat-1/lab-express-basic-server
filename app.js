@@ -21,9 +21,14 @@ app.use(morgan("dev"));
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/home.html");
 });
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/views/blog.html");
+});
+
 app.get("/api/projects", (req, res) => {
   res.json(projects);
 });
+
 app.get("/api/articles", (req, res) => {
   res.json("articles");
 });
